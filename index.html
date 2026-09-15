@@ -4,6 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Escapada Playera — El Timón de Belén | 14 Personas</title>
+  
+  <!-- Metadatos OpenGraph para Previsualización en WhatsApp y Redes Sociales -->
+  <meta name="description" content="Centro de mando, fotos reales, piscina, pool, pin pon, menú parrillero y presupuesto transparente ($25.12/p) para la escapada a El Timón de Belén (Ocumare). Sáb 3 - Dom 4 Octubre.">
+  <meta name="theme-color" content="#082f49">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cazx008.github.io/clavel-app/">
+  <meta property="og:title" content="🌴 Escapada Ocumare — El Timón de Belén (14 Personas)">
+  <meta property="og:description" content="Fotos reales, piscina, parrillera, pool, pin pon, menú y presupuesto ($25.12/p). Sáb 3 - Dom 4 Octubre.">
+  <meta property="og:image" content="https://cazx008.github.io/clavel-app/img/posada_06.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta name="twitter:card" content="summary_large_image">
+
   <!-- Tailwind CSS CDN oficial antigravity -->
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
   <!-- Luma Official Checkout SDK -->
@@ -12,6 +25,13 @@
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
     body {
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
     }
     .glass-card {
       background: rgba(255, 255, 255, 0.94);
@@ -143,7 +163,7 @@
   </div>
 
   <!-- ================= CONTENT SECTIONS ================= -->
-  <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pb-24 sm:pb-12">
 
     <!-- TAB 1: GALERÍA DE LA POSADA (IDENTIFICACIÓN EXACTA Y LÓGICA) -->
     <section id="tab-galeria" class="tab-content space-y-8">
@@ -178,7 +198,7 @@
         
         <!-- FOTO 1: PISCINA PRIVADA (HERO FEATURED - posada_06.jpg) -->
         <div data-category="piscina" onclick="openLightbox('img/posada_06.jpg', 'Piscina Privada & Solarium — Agua cristalina con escalones de acceso y área de descanso')" class="gallery-card col-span-2 row-span-2 relative rounded-2xl overflow-hidden shadow-md cursor-pointer group bg-slate-900 aspect-video md:aspect-auto">
-          <img src="img/posada_06.jpg" alt="Piscina Privada" class="gallery-img w-full h-full object-cover group-hover:opacity-90">
+          <img src="img/posada_06.jpg" alt="Piscina Privada" loading="lazy" decoding="async" class="gallery-img w-full h-full object-cover group-hover:opacity-90">
           <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-5">
             <span class="inline-block px-2.5 py-0.5 rounded text-[11px] font-bold bg-cyan-500 text-white w-max mb-1">ÁREA PRINCIPAL</span>
             <h4 class="text-white font-bold text-base sm:text-xl">Piscina Privada & Solarium</h4>
@@ -188,7 +208,7 @@
 
         <!-- FOTO 2: ZONA PARRILLERA (posada_10.jpg) -->
         <div data-category="parrilla" onclick="openLightbox('img/posada_10.jpg', 'Zona Parrillera & Cocina Exterior — Parrillera de ladrillos con chimenea, estufa industrial de 3 hornillas y mesones con fregadero')" class="gallery-card col-span-2 relative rounded-2xl overflow-hidden shadow-sm cursor-pointer group bg-slate-900 aspect-video">
-          <img src="img/posada_10.jpg" alt="Parrillera de ladrillos" class="gallery-img w-full h-full object-cover group-hover:opacity-90">
+          <img src="img/posada_10.jpg" alt="Parrillera de ladrillos" loading="lazy" decoding="async" class="gallery-img w-full h-full object-cover group-hover:opacity-90">
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-4">
             <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500 text-white w-max mb-0.5">ALMUERZO SÁBADO</span>
             <h5 class="text-white font-bold text-sm sm:text-base">Parrillera de Ladrillo & Estufa a Gas</h5>
@@ -198,7 +218,7 @@
 
         <!-- FOTO 3: CANEY BAR SOCIAL (posada_01.jpg) -->
         <div data-category="parrilla" onclick="openLightbox('img/posada_01.jpg', 'Caney Bar & Barra Social — Barra rústica con taburetes altos, luces colgantes y acceso al congelador al fondo')" class="gallery-card relative rounded-2xl overflow-hidden shadow-sm cursor-pointer group bg-slate-900 aspect-square">
-          <img src="img/posada_01.jpg" alt="Bar y barra exterior" class="gallery-img w-full h-full object-cover group-hover:opacity-90">
+          <img src="img/posada_01.jpg" alt="Bar y barra exterior" loading="lazy" decoding="async" class="gallery-img w-full h-full object-cover group-hover:opacity-90">
           <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex flex-col justify-end p-3">
             <h5 class="text-white font-semibold text-xs">Caney Bar & Barra Exterior</h5>
             <p class="text-[10px] text-slate-300">Taburetes altos y zona de tragos</p>
@@ -207,7 +227,7 @@
 
         <!-- FOTO 4: TERRAZA PISCINA CON SOMBRILLA (posada_11.jpg) -->
         <div data-category="piscina" onclick="openLightbox('img/posada_11.jpg', 'Terraza de Piscina & Sombrilla — Mesa de jardín con sombrilla grande para compartir junto a la piscina')" class="gallery-card relative rounded-2xl overflow-hidden shadow-sm cursor-pointer group bg-slate-900 aspect-square">
-          <img src="img/posada_11.jpg" alt="Mesa de jardín con sombrilla" class="gallery-img w-full h-full object-cover group-hover:opacity-90">
+          <img src="img/posada_11.jpg" alt="Mesa de jardín con sombrilla" loading="lazy" decoding="async" class="gallery-img w-full h-full object-cover group-hover:opacity-90">
           <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex flex-col justify-end p-3">
             <h5 class="text-white font-semibold text-xs">Mesa con Sombrilla</h5>
             <p class="text-[10px] text-slate-300">Área de sombra al borde de la piscina</p>
@@ -216,7 +236,7 @@
 
         <!-- FOTO 5: PORCHE TECHADO CON BANCOS (posada_03.jpg) -->
         <div data-category="social" onclick="openLightbox('img/posada_03.jpg', 'Porche & Corredor Techado — Mesa redonda, bancos de descanso de madera y vista directa al patio parrillero')" class="gallery-card relative rounded-2xl overflow-hidden shadow-sm cursor-pointer group bg-slate-900 aspect-square">
-          <img src="img/posada_03.jpg" alt="Porche techado" class="gallery-img w-full h-full object-cover group-hover:opacity-90">
+          <img src="img/posada_03.jpg" alt="Porche techado" loading="lazy" decoding="async" class="gallery-img w-full h-full object-cover group-hover:opacity-90">
           <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex flex-col justify-end p-3">
             <h5 class="text-white font-semibold text-xs">Porche & Corredor Techado</h5>
             <p class="text-[10px] text-slate-300">Bancos de madera y mesita fresca</p>
@@ -225,7 +245,7 @@
 
         <!-- FOTO 6: HABITACIÓN MATRIMONIAL (posada_05.jpg) -->
         <div data-category="cuartos" onclick="openLightbox('img/posada_05.jpg', 'Habitación Matrimonial — Cama doble matrimonial con lencería blanca y cabecero rústico de madera natural')" class="gallery-card relative rounded-2xl overflow-hidden shadow-sm cursor-pointer group bg-slate-900 aspect-square">
-          <img src="img/posada_05.jpg" alt="Cama matrimonial" class="gallery-img w-full h-full object-cover group-hover:opacity-90">
+          <img src="img/posada_05.jpg" alt="Cama matrimonial" loading="lazy" decoding="async" class="gallery-img w-full h-full object-cover group-hover:opacity-90">
           <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex flex-col justify-end p-3">
             <h5 class="text-white font-semibold text-xs">Dormitorio Matrimonial</h5>
             <p class="text-[10px] text-slate-300">Cabecero rústico en madera</p>
@@ -234,7 +254,7 @@
 
         <!-- FOTO 7: DORMITORIO GRUPAL CON LITERAS (posada_09.jpg) -->
         <div data-category="cuartos" onclick="openLightbox('img/posada_09.jpg', 'Dormitorio Grupal con Literas — Litera doble metálica + cama individual + cama matrimonial (capacidad 5 personas)')" class="gallery-card relative rounded-2xl overflow-hidden shadow-sm cursor-pointer group bg-slate-900 aspect-square">
-          <img src="img/posada_09.jpg" alt="Habitación con literas" class="gallery-img w-full h-full object-cover group-hover:opacity-90">
+          <img src="img/posada_09.jpg" alt="Habitación con literas" loading="lazy" decoding="async" class="gallery-img w-full h-full object-cover group-hover:opacity-90">
           <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex flex-col justify-end p-3">
             <h5 class="text-white font-semibold text-xs">Cuarto Grupal con Literas</h5>
             <p class="text-[10px] text-slate-300">Litera doble + matrimonial + individual</p>
@@ -243,7 +263,7 @@
 
         <!-- FOTO 8: HABITACIÓN MIXTA MATRIMONIAL + INDIVIDUAL (posada_07.jpg) -->
         <div data-category="cuartos" onclick="openLightbox('img/posada_07.jpg', 'Habitación Mixta — Cama matrimonial amplia con cabecero rústico y cama individual auxiliar')" class="gallery-card relative rounded-2xl overflow-hidden shadow-sm cursor-pointer group bg-slate-900 aspect-square">
-          <img src="img/posada_07.jpg" alt="Habitación mixta" class="gallery-img w-full h-full object-cover group-hover:opacity-90">
+          <img src="img/posada_07.jpg" alt="Habitación mixta" loading="lazy" decoding="async" class="gallery-img w-full h-full object-cover group-hover:opacity-90">
           <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex flex-col justify-end p-3">
             <h5 class="text-white font-semibold text-xs">Habitación Mixta</h5>
             <p class="text-[10px] text-slate-300">Cama matrimonial + cama individual</p>
@@ -252,7 +272,7 @@
 
         <!-- FOTO 9: HABITACIÓN CAMAS INDIVIDUALES & A/C (posada_04.jpg) -->
         <div data-category="cuartos" onclick="openLightbox('img/posada_04.jpg', 'Habitación con Camas Individuales — Climatizada con aire acondicionado split, ventilador de techo y baño privado')" class="gallery-card relative rounded-2xl overflow-hidden shadow-sm cursor-pointer group bg-slate-900 aspect-square">
-          <img src="img/posada_04.jpg" alt="Camas individuales y AC" class="gallery-img w-full h-full object-cover group-hover:opacity-90">
+          <img src="img/posada_04.jpg" alt="Camas individuales y AC" loading="lazy" decoding="async" class="gallery-img w-full h-full object-cover group-hover:opacity-90">
           <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex flex-col justify-end p-3">
             <h5 class="text-white font-semibold text-xs">Camas Individuales & A/C</h5>
             <p class="text-[10px] text-slate-300">Split climatizado y ventilador</p>
@@ -261,7 +281,7 @@
 
         <!-- FOTO 10: SALA DE ESTAR & SOFÁ CAMA DÚPLEX (posada_02.jpg) -->
         <div data-category="social" onclick="openLightbox('img/posada_02.jpg', 'Sala de Estar Interior — Sofá-cama nido de madera, pared rústica de piedra laja y arco conector a la cocina')" class="gallery-card relative rounded-2xl overflow-hidden shadow-sm cursor-pointer group bg-slate-900 aspect-square">
-          <img src="img/posada_02.jpg" alt="Sofá cama en sala" class="gallery-img w-full h-full object-cover group-hover:opacity-90">
+          <img src="img/posada_02.jpg" alt="Sofá cama en sala" loading="lazy" decoding="async" class="gallery-img w-full h-full object-cover group-hover:opacity-90">
           <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex flex-col justify-end p-3">
             <h5 class="text-white font-semibold text-xs">Sala & Sofá Cama Dúplex</h5>
             <p class="text-[10px] text-slate-300">Pared de piedra laja y arco a cocina</p>
@@ -270,7 +290,7 @@
 
         <!-- FOTO 11: DISTRIBUIDOR CENTRAL DE HABITACIONES (posada_08.jpg) -->
         <div data-category="social" onclick="openLightbox('img/posada_08.jpg', 'Distribuidor Central & Sala Interna — Vista panorámica de la sala que conecta los dormitorios y áreas internas')" class="gallery-card relative rounded-2xl overflow-hidden shadow-sm cursor-pointer group bg-slate-900 aspect-square">
-          <img src="img/posada_08.jpg" alt="Sala interna y puertas" class="gallery-img w-full h-full object-cover group-hover:opacity-90">
+          <img src="img/posada_08.jpg" alt="Sala interna y puertas" loading="lazy" decoding="async" class="gallery-img w-full h-full object-cover group-hover:opacity-90">
           <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex flex-col justify-end p-3">
             <h5 class="text-white font-semibold text-xs">Distribuidor Central</h5>
             <p class="text-[10px] text-slate-300">Conexión a los 4 dormitorios</p>
@@ -279,7 +299,7 @@
 
         <!-- FOTO 12: ESTACIONAMIENTO PRIVADO INTERNO (posada_12.jpg) -->
         <div data-category="piscina" onclick="openLightbox('img/posada_12.jpg', 'Estacionamiento Privado Cerrado — Amplio patio lateral pavimentado de concreto con muro perimetral seguro para vehículos')" class="gallery-card relative rounded-2xl overflow-hidden shadow-sm cursor-pointer group bg-slate-900 aspect-square">
-          <img src="img/posada_12.jpg" alt="Estacionamiento cerrado" class="gallery-img w-full h-full object-cover group-hover:opacity-90">
+          <img src="img/posada_12.jpg" alt="Estacionamiento cerrado" loading="lazy" decoding="async" class="gallery-img w-full h-full object-cover group-hover:opacity-90">
           <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex flex-col justify-end p-3">
             <h5 class="text-white font-semibold text-xs">Estacionamiento Privado</h5>
             <p class="text-[10px] text-slate-300">Patio pavimentado seguro para autos</p>
@@ -293,27 +313,148 @@
     <!-- TAB 2: CASA & LOGÍSTICA -->
     <section id="tab-itinerario" class="tab-content hidden space-y-8">
       
-      <!-- Alert / Info Box -->
-      <div class="bg-gradient-to-r from-sky-50 to-cyan-50 border border-cyan-200 rounded-2xl p-5 shadow-sm flex items-start gap-4">
-        <div class="w-10 h-10 rounded-xl bg-cyan-600 text-white flex items-center justify-center shrink-0 shadow-md">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-        </div>
-        <div>
-          <h3 class="text-sm font-bold text-cyan-900 uppercase tracking-wider">Detalles de Convocatoria</h3>
-          <p class="text-sm text-cyan-800 mt-1 leading-relaxed">
-            Punto de partida pautado a las <strong>6:00 AM del sábado</strong> en caravana hacia Ocumare de la Costa. Retorno el <strong>domingo a las 4:00 PM</strong>. La posada privada <strong>El Timón de Belén</strong> cuenta con todas las comodidades operativas para los 14 tripulantes.
-          </p>
+      <!-- UBICACIÓN & DIRECCIÓN EXACTA -->
+      <div class="glass-card rounded-2xl p-6 sm:p-7 shadow-sm border border-cyan-200/90 bg-gradient-to-r from-sky-50/70 via-white to-cyan-50/60">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div class="space-y-1">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-cyan-600 text-white shadow-sm">
+              <span>📍</span> UBICACIÓN CONFIRMADA
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900">Posada El Timón de Belén</h3>
+            <p class="text-xs sm:text-sm text-slate-600" id="addressText">
+              Sector El Playón, 27 Calle Urdaneta, Ocumare de la Costa, Estado Aragua.
+            </p>
+          </div>
+          <div class="flex flex-wrap items-center gap-2.5">
+            <button onclick="copyAddress()" id="btn-copy-address" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white border border-slate-300 text-slate-700 text-xs font-bold hover:bg-slate-50 transition-all shadow-sm active:scale-95 cursor-pointer">
+              <span>📋</span> <span id="copy-address-label">Copiar Dirección</span>
+            </button>
+            <a href="https://maps.app.goo.gl/nHm9Tgu24aLaVbiB7" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-bold transition-all shadow-md shadow-cyan-600/20 active:scale-95">
+              <span>🗺️</span> Abrir en Google Maps
+            </a>
+          </div>
         </div>
       </div>
 
-      <!-- Amenities Grid -->
+      <!-- LOGÍSTICA DE TRANSPORTE CENTRALIZADA (SOLIDARIA) -->
+      <div class="bg-gradient-to-r from-amber-500/15 via-orange-500/10 to-amber-500/5 border-l-4 border-amber-500 bg-white rounded-2xl p-6 shadow-sm">
+        <div class="flex items-start gap-4">
+          <div class="w-11 h-11 rounded-xl bg-amber-500 text-slate-950 flex items-center justify-center text-xl shrink-0 shadow-md">
+            🚗
+          </div>
+          <div>
+            <div class="inline-block px-2.5 py-0.5 rounded text-[11px] font-bold bg-amber-200 text-amber-900 uppercase tracking-wider mb-1">
+              Planificación Colectiva de Transporte
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">Nadie se queda atrás: Coordinación Centralizada</h3>
+            <p class="text-xs sm:text-sm text-slate-700 mt-1 leading-relaxed">
+              El transporte de ida y vuelta <strong>se planificará y coordinará de manera solidaria para los 14 tripulantes</strong>. No es que cada quien resuelva por su cuenta: la organización distribuirá los cupos en vehículos particulares y coordinará traslados compartidos. En el formulario oficial de Luma indicarás si vas con vehículo propio y cupos libres, o si requieres puesto de transporte asignado.
+            </p>
+            <div class="mt-3 flex flex-wrap gap-3 text-xs text-amber-900 font-semibold">
+              <span class="flex items-center gap-1">⏰ Salida caravana: Sáb 6:00 AM</span>
+              <span class="flex items-center gap-1">🔄 Retorno: Dom 4:00 PM</span>
+              <span class="flex items-center gap-1">📍 Punto de encuentro: A coordinar por el grupo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DISTRIBUCIÓN DE HABITACIONES (16 CAMAS REALES CLIMATIZADAS) -->
+      <div class="space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold badge-soft-purple mb-1">
+              <span>🛏️</span> CAPACIDAD REAL: 16 PUESTOS CLIMATIZADOS
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900">Distribución de los 4 Dormitorios</h3>
+            <p class="text-xs text-slate-500">Comodidad holgada para los 14 tripulantes con lencería limpia provista por la posada:</p>
+          </div>
+          <span class="text-xs font-bold text-emerald-800 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-xl flex items-center gap-1.5">
+            <span>✓</span> Sábanas y almohadas incluidas
+          </span>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Cuarto 1 -->
+          <div class="glass-card rounded-2xl p-4 shadow-sm border border-slate-200/80 hover:border-cyan-300 transition-all">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold px-2 py-0.5 rounded bg-cyan-100 text-cyan-800">Cuarto 1 Principal</span>
+              <span class="text-xs font-extrabold text-slate-700">5 Personas</span>
+            </div>
+            <h4 class="font-bold text-slate-900 text-sm">Matrimonial + Trilítera</h4>
+            <p class="text-xs text-slate-500 mt-1">1 Cama matrimonial + litera de 3 niveles. Aire Acondicionado, TV por cable y <strong>baño privado</strong>.</p>
+          </div>
+
+          <!-- Cuarto 2 -->
+          <div class="glass-card rounded-2xl p-4 shadow-sm border border-slate-200/80 hover:border-cyan-300 transition-all">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold px-2 py-0.5 rounded bg-cyan-100 text-cyan-800">Cuarto 2 Principal</span>
+              <span class="text-xs font-extrabold text-slate-700">3 Personas</span>
+            </div>
+            <h4 class="font-bold text-slate-900 text-sm">Matrimonial + Individual</h4>
+            <p class="text-xs text-slate-500 mt-1">1 Cama matrimonial + 1 individual auxiliar. Aire Acondicionado, TV por cable y <strong>baño privado</strong>.</p>
+          </div>
+
+          <!-- Cuarto 3 -->
+          <div class="glass-card rounded-2xl p-4 shadow-sm border border-slate-200/80 hover:border-cyan-300 transition-all">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold px-2 py-0.5 rounded bg-purple-100 text-purple-800">Cuarto 3 Grupal</span>
+              <span class="text-xs font-extrabold text-slate-700">4 Personas</span>
+            </div>
+            <h4 class="font-bold text-slate-900 text-sm">2 Camas Literas</h4>
+            <p class="text-xs text-slate-500 mt-1">4 Puestos individuales en dos literas dobles. Climatizado con Aire Acondicionado y TV.</p>
+          </div>
+
+          <!-- Cuarto 4 -->
+          <div class="glass-card rounded-2xl p-4 shadow-sm border border-slate-200/80 hover:border-cyan-300 transition-all">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold px-2 py-0.5 rounded bg-purple-100 text-purple-800">Cuarto 4 Grupal</span>
+              <span class="text-xs font-extrabold text-slate-700">4 Personas</span>
+            </div>
+            <h4 class="font-bold text-slate-900 text-sm">2 Camas Literas</h4>
+            <p class="text-xs text-slate-500 mt-1">4 Puestos individuales en dos literas dobles. Climatizado con Aire Acondicionado y TV.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ZONA DE ENTRETENIMIENTO & JUEGOS (NUEVO) -->
+      <div class="glass-card rounded-2xl p-6 shadow-sm border border-emerald-200/80 bg-gradient-to-r from-emerald-50/40 via-white to-teal-50/30">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="text-2xl">🎱</span>
+          <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Zona de Entretenimiento, Juegos & Conectividad</h3>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="bg-white p-3.5 rounded-xl border border-slate-200">
+            <span class="text-xl">🎱</span>
+            <h5 class="font-bold text-slate-900 text-xs mt-1">Mesa de Pool</h5>
+            <p class="text-[11px] text-slate-500 mt-0.5">Mesa de billar con tacos y bolas listos para retas nocturnas.</p>
+          </div>
+          <div class="bg-white p-3.5 rounded-xl border border-slate-200">
+            <span class="text-xl">🏓</span>
+            <h5 class="font-bold text-slate-900 text-xs mt-1">Mesa de Pin Pon</h5>
+            <p class="text-[11px] text-slate-500 mt-0.5">Mesa de ping-pong para torneos rápidos entre amigos.</p>
+          </div>
+          <div class="bg-white p-3.5 rounded-xl border border-slate-200">
+            <span class="text-xl">🎲</span>
+            <h5 class="font-bold text-slate-900 text-xs mt-1">Mesa de Dominó</h5>
+            <p class="text-[11px] text-slate-500 mt-0.5">Espacio clásico de juego con fichas y sillas frescas.</p>
+          </div>
+          <div class="bg-white p-3.5 rounded-xl border border-slate-200">
+            <span class="text-xl">📶</span>
+            <h5 class="font-bold text-slate-900 text-xs mt-1">Wi-Fi & Música</h5>
+            <p class="text-[11px] text-slate-500 mt-0.5">Conexión Wi-Fi incluida. <em>Se sugiere llevar corneta Bluetooth y micrófonos.</em></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- INSTALACIONES, AUTONOMÍA Y SERVICIOS -->
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
         <div class="glass-card rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow">
           <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center text-xl font-bold mb-3">
             🏡
           </div>
           <h4 class="font-bold text-slate-900">Alquiler Posada: $150</h4>
-          <p class="text-xs text-slate-500 mt-1">Costo cerrado por la noche de alojamiento completo para los 14 ($10.71 por persona). Habitaciones con aire acondicionado y privacidad total.</p>
+          <p class="text-xs text-slate-500 mt-1">Costo cerrado por la noche de alojamiento completo para los 14 ($10.71 por persona). Privacidad total de la casa.</p>
           <span class="inline-block mt-3 px-2.5 py-1 text-xs font-semibold rounded-md badge-soft-purple">Costo Fijo Confirmado</span>
         </div>
 
@@ -322,7 +463,7 @@
             ❄️
           </div>
           <h4 class="font-bold text-slate-900">Congelador Perco 720L</h4>
-          <p class="text-xs text-slate-500 mt-1">Nevera congeladora horizontal de alta capacidad. Garantiza frío extremo para carnes, botellas y almacenamiento de 8-10 bolsas de hielo.</p>
+          <p class="text-xs text-slate-500 mt-1">Nevera congeladora horizontal de alta capacidad. Frío extremo para carnes, botellas y almacenamiento de 8-10 bolsas de hielo.</p>
           <span class="inline-block mt-3 px-2.5 py-1 text-xs font-semibold rounded-md badge-soft-cyan">Poder Frío Resuelto</span>
         </div>
 
@@ -331,7 +472,7 @@
             🥩
           </div>
           <h4 class="font-bold text-slate-900">Zona Parrillera & Cocina</h4>
-          <p class="text-xs text-slate-500 mt-1">Parrillera de ladrillos con chimenea, estufa industrial de 3 hornillas y fregadero. Lista para la parrillada estelar del sábado.</p>
+          <p class="text-xs text-slate-500 mt-1">Parrillera de ladrillos con chimenea, estufa industrial de 3 hornillas, fregadero y vajilla completa de cocina.</p>
           <span class="inline-block mt-3 px-2.5 py-1 text-xs font-semibold rounded-md badge-soft-amber">Utensilios Listos</span>
         </div>
 
@@ -340,8 +481,17 @@
             💧
           </div>
           <h4 class="font-bold text-slate-900">Autonomía de Agua 100%</h4>
-          <p class="text-xs text-slate-500 mt-1">Equipada con tanque subterráneo y tanque aéreo con bomba. Cero preocupaciones de corte de agua para duchas post-playa de los 14.</p>
+          <p class="text-xs text-slate-500 mt-1">Tanque subterráneo + tanque aéreo con bomba presurizadora. Cero riesgo de escasez de agua para duchas post-playa de los 14.</p>
           <span class="inline-block mt-3 px-2.5 py-1 text-xs font-semibold rounded-md badge-soft-emerald">Sin Riesgo de Escasez</span>
+        </div>
+
+        <div class="glass-card rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-800 flex items-center justify-center text-xl font-bold mb-3">
+            🛡️
+          </div>
+          <h4 class="font-bold text-slate-900">Garaje Seguro & Cámaras</h4>
+          <p class="text-xs text-slate-500 mt-1">Estacionamiento pavimentado cerrado dentro de la propiedad y circuito de cámaras de seguridad perimetral para resguardo total.</p>
+          <span class="inline-block mt-3 px-2.5 py-1 text-xs font-semibold rounded-md bg-sky-50 text-sky-700 border border-sky-200">Seguridad Garantizada</span>
         </div>
 
         <div class="glass-card rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow">
@@ -352,16 +502,8 @@
           <p class="text-xs text-slate-500 mt-1">Percoladora comercial para café colado continuo. Dosificado en paquetes de 100g para 15-20 tazas frescas por colada.</p>
           <span class="inline-block mt-3 px-2.5 py-1 text-xs font-semibold rounded-md badge-soft-amber">100g = 1 Tanda Fresca</span>
         </div>
-
-        <div class="glass-card rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center text-xl font-bold mb-3">
-            🎒
-          </div>
-          <h4 class="font-bold text-slate-900">Inventario de Cavas Portátiles</h4>
-          <p class="text-xs text-slate-500 mt-1">Necesitamos 3 a 4 cavas portátiles para bajar a la arena con las latas frías y hielo limpio sin alterar el congelador de la casa.</p>
-          <span class="inline-block mt-3 px-2.5 py-1 text-xs font-semibold rounded-md bg-rose-50 text-rose-600 border border-rose-200">Por Asignar en Grupo</span>
-        </div>
       </div>
+
     </section>
 
     <!-- TAB 3: MENÚ & VOTACIÓN -->
@@ -771,6 +913,88 @@
           </table>
         </div>
       </div>
+
+      <!-- CUENTA CUSTODIA & ESTRATEGIA FINANCIERA -->
+      <div class="grid md:grid-cols-12 gap-6">
+        
+        <!-- Tarjeta Pagomóvil BDV -->
+        <div class="md:col-span-6 glass-card rounded-2xl p-6 shadow-sm border-2 border-emerald-300/80 bg-gradient-to-br from-emerald-50/40 via-white to-teal-50/30">
+          <div class="flex items-center justify-between mb-3">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-600 text-white shadow-sm">
+              <span>💳</span> CUENTA CUSTODIA OFICIAL
+            </div>
+            <span class="text-xs font-bold text-emerald-800">Pagomóvil BDV</span>
+          </div>
+
+          <h3 class="text-lg font-extrabold text-slate-900">Datos para Transferencias y Abonos</h3>
+          <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+            Cuenta receptora para centralizar los aportes, congelar la reserva de la posada e ir preparando las compras:
+          </p>
+
+          <div class="mt-4 p-4 rounded-xl bg-white border border-emerald-200/90 shadow-inner space-y-2.5 text-xs text-slate-700">
+            <div class="flex justify-between items-center pb-2 border-b border-slate-100">
+              <span class="text-slate-500 font-medium">Banco:</span>
+              <span class="font-bold text-slate-900">0102 - Banco de Venezuela</span>
+            </div>
+            <div class="flex justify-between items-center pb-2 border-b border-slate-100">
+              <span class="text-slate-500 font-medium">Teléfono:</span>
+              <span class="font-bold text-slate-900 tracking-wider">0412-1339426</span>
+            </div>
+            <div class="flex justify-between items-center pb-2 border-b border-slate-100">
+              <span class="text-slate-500 font-medium">Cédula:</span>
+              <span class="font-bold text-slate-900 tracking-wider">V-22.296.658</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-slate-500 font-medium">Beneficiario:</span>
+              <span class="font-bold text-emerald-800">Mikel Itriago (Organizador)</span>
+            </div>
+          </div>
+
+          <div class="mt-4 flex flex-wrap gap-2.5">
+            <button onclick="copyPagomovil()" id="btn-copy-pagomovil" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-all shadow-md shadow-emerald-600/20 active:scale-95 cursor-pointer">
+              <span>📋</span> <span id="copy-pagomovil-label">Copiar Datos de Pagomóvil</span>
+            </button>
+            <span class="text-[11px] text-slate-500 flex items-center gap-1">
+              <span>🔒</span> Reportar comprobante al organizador
+            </span>
+          </div>
+        </div>
+
+        <!-- Estrategia Financiera & Splitwise -->
+        <div class="md:col-span-6 glass-card rounded-2xl p-6 shadow-sm border border-slate-200/80 bg-white flex flex-col justify-between">
+          <div>
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-cyan-100 text-cyan-800 mb-2">
+              <span>⚖️</span> ESTRATEGIA Y GASTOS CLAROS
+            </div>
+            <h3 class="text-lg font-extrabold text-slate-900">Transparencia Total & Liquidación con Splitwise</h3>
+            <ul class="mt-3 space-y-2.5 text-xs text-slate-600 leading-relaxed">
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500 font-bold">1.</span>
+                <span><strong>Alojamiento Fijo:</strong> $150.00 cerrados ($10.71/persona). No varía.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-amber-500 font-bold">2.</span>
+                <span><strong>Compras Estimadas:</strong> El menú de $201.70 es una proyección. Se ajustará al céntimo con las facturas y compras reales.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-sky-500 font-bold">3.</span>
+                <span><strong>Transporte Colectivo:</strong> Se planificará centralizadamente para optimizar vehículos y combustible solidario.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-purple-500 font-bold">4.</span>
+                <span><strong>División Final:</strong> Al terminar el viaje se cargará todo en <strong>Splitwise</strong> para cuadrar reembolsos y saldos con total claridad.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-4 p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600 flex items-center gap-2">
+            <span class="text-base">💡</span>
+            <span><em>Te recomendamos revisar esta página periódicamente para ver los avances de transporte y compras.</em></span>
+          </div>
+        </div>
+
+      </div>
+
     </section>
 
     <!-- TAB 5: ROLES & CHECKLIST -->
@@ -846,27 +1070,52 @@
 
       </div>
 
-      <!-- PERSONAL PACKING CHECKLIST -->
+      <!-- PERSONAL PACKING CHECKLIST PERSISTENTE -->
       <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
-        <h3 class="font-bold text-slate-900 mb-3 flex items-center gap-2">
-          <span>🎒</span> Checklist Personal Obligatorio (Para cada uno de los 14)
-        </h3>
-        <div class="grid sm:grid-cols-2 gap-3 text-xs text-slate-600">
-          <label class="flex items-center gap-2 p-2 rounded-lg bg-slate-50 border border-slate-100 cursor-pointer">
-            <input type="checkbox" class="rounded text-cyan-600 focus:ring-cyan-500">
-            <span>Toalla playera + Toalla de baño personal</span>
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-3 pb-3 border-b border-slate-100">
+          <div>
+            <h3 class="font-bold text-slate-900 flex items-center gap-2">
+              <span>🎒</span> Checklist Personal Interactivo (Para cada uno de los 14)
+            </h3>
+            <p class="text-xs text-slate-500 mt-0.5">Tus selecciones se guardan automáticamente en tu teléfono para cuando empaques.</p>
+          </div>
+          <span class="text-xs font-bold text-emerald-800 bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-lg">
+            ✓ Sábanas y almohadas ya incluidas en la posada
+          </span>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-3 text-xs text-slate-700">
+          <label class="flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-50 border border-slate-200/70 hover:bg-cyan-50/50 transition-colors cursor-pointer">
+            <input type="checkbox" id="chk-toallas" onchange="toggleChecklistItem(this)" class="w-4 h-4 rounded text-cyan-600 focus:ring-cyan-500">
+            <span>Toalla playera + toalla de baño personal (indispensable)</span>
           </label>
-          <label class="flex items-center gap-2 p-2 rounded-lg bg-slate-50 border border-slate-100 cursor-pointer">
-            <input type="checkbox" class="rounded text-cyan-600 focus:ring-cyan-500">
-            <span>Protector solar + Repelente de mosquitos (indispensable)</span>
+          <label class="flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-50 border border-slate-200/70 hover:bg-cyan-50/50 transition-colors cursor-pointer">
+            <input type="checkbox" id="chk-protector" onchange="toggleChecklistItem(this)" class="w-4 h-4 rounded text-cyan-600 focus:ring-cyan-500">
+            <span>Protector solar + repelente de mosquitos (clave para costa)</span>
           </label>
-          <label class="flex items-center gap-2 p-2 rounded-lg bg-slate-50 border border-slate-100 cursor-pointer">
-            <input type="checkbox" class="rounded text-cyan-600 focus:ring-cyan-500">
-            <span>Vaso térmico personal para tragos (para reducir desechables)</span>
+          <label class="flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-50 border border-slate-200/70 hover:bg-cyan-50/50 transition-colors cursor-pointer">
+            <input type="checkbox" id="chk-vaso" onchange="toggleChecklistItem(this)" class="w-4 h-4 rounded text-cyan-600 focus:ring-cyan-500">
+            <span>Vaso térmico personal con tapa (ahorro de hielo y cero basura)</span>
           </label>
-          <label class="flex items-center gap-2 p-2 rounded-lg bg-slate-50 border border-slate-100 cursor-pointer">
-            <input type="checkbox" class="rounded text-cyan-600 focus:ring-cyan-500">
-            <span>Medicamentos personales / botiquín de emergencia</span>
+          <label class="flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-50 border border-slate-200/70 hover:bg-cyan-50/50 transition-colors cursor-pointer">
+            <input type="checkbox" id="chk-medicinas" onchange="toggleChecklistItem(this)" class="w-4 h-4 rounded text-cyan-600 focus:ring-cyan-500">
+            <span>Medicamentos personales / pastillas para mareo o dolor</span>
+          </label>
+          <label class="flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-50 border border-slate-200/70 hover:bg-cyan-50/50 transition-colors cursor-pointer">
+            <input type="checkbox" id="chk-trajes" onchange="toggleChecklistItem(this)" class="w-4 h-4 rounded text-cyan-600 focus:ring-cyan-500">
+            <span>2 trajes de baño + ropa fresca de playa + sandalias / cholas</span>
+          </label>
+          <label class="flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-50 border border-slate-200/70 hover:bg-cyan-50/50 transition-colors cursor-pointer">
+            <input type="checkbox" id="chk-cargador" onchange="toggleChecklistItem(this)" class="w-4 h-4 rounded text-cyan-600 focus:ring-cyan-500">
+            <span>Cargador de celular + powerbank (batería externa)</span>
+          </label>
+          <label class="flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-50 border border-slate-200/70 hover:bg-cyan-50/50 transition-colors cursor-pointer">
+            <input type="checkbox" id="chk-efectivo" onchange="toggleChecklistItem(this)" class="w-4 h-4 rounded text-cyan-600 focus:ring-cyan-500">
+            <span>Efectivo en Bs / USD sencillo para gastos individuales en playa</span>
+          </label>
+          <label class="flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-50 border border-slate-200/70 hover:bg-cyan-50/50 transition-colors cursor-pointer">
+            <input type="checkbox" id="chk-sonido" onchange="toggleChecklistItem(this)" class="w-4 h-4 rounded text-cyan-600 focus:ring-cyan-500">
+            <span>Corneta Bluetooth o micrófonos (si te anotas para la música)</span>
           </label>
         </div>
       </div>
@@ -874,17 +1123,46 @@
 
   </main>
 
-  <!-- ================= LIGHTBOX MODAL ================= -->
-  <div id="lightbox-modal" onclick="closeLightbox(event)" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4 transition-opacity duration-300">
-    <div class="relative max-w-4xl w-full flex flex-col items-center">
-      <button onclick="closeLightboxDirect()" class="absolute -top-12 right-0 text-white hover:text-cyan-400 text-3xl font-bold p-2 focus:outline-none">&times;</button>
-      <img id="lightbox-img" src="" alt="Vista ampliada" class="max-h-[80vh] w-auto max-w-full rounded-xl shadow-2xl object-contain border border-white/10">
-      <p id="lightbox-caption" class="text-white text-sm font-medium mt-4 text-center bg-black/70 px-5 py-2.5 rounded-full border border-white/15 max-w-xl"></p>
+  <!-- ================= BARRA FLOTANTE MÓVIL INFERIOR (SM:HIDDEN) ================= -->
+  <aside id="mobile-cuota-bar" class="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-slate-900/95 backdrop-blur-md border-t border-slate-800 px-4 py-3 shadow-2xl flex items-center justify-between gap-3">
+    <div>
+      <span class="text-[10px] uppercase font-bold text-slate-400 block leading-tight">Cuota x Persona (14)</span>
+      <div class="flex items-baseline gap-1.5">
+        <span class="text-lg font-black text-cyan-400" id="mobileCuotaVal">$25.12</span>
+        <span class="text-[10px] text-slate-300 font-medium">posada + comida</span>
+      </div>
     </div>
+    <div class="flex items-center gap-2">
+      <button onclick="goToMenuSection()" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold text-xs shadow-md shadow-rose-500/20 active:scale-95 cursor-pointer">
+        <span>🗳️</span> Votar Menú
+      </button>
+      <button onclick="switchTab('presupuesto'); window.scrollTo({top: 0, behavior: 'smooth'});" class="p-2 rounded-xl bg-slate-800 text-slate-300 text-xs font-semibold hover:bg-slate-700 cursor-pointer" aria-label="Ver presupuesto">
+        <span>📊</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ================= LIGHTBOX MODAL ACCESIBLE ================= -->
+  <div id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Visualizador de fotografías de la posada" onclick="closeLightbox(event)" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4 transition-opacity duration-300">
+    <button onclick="closeLightboxDirect()" aria-label="Cerrar visualizador" class="absolute top-4 right-4 z-50 text-white hover:text-cyan-400 text-3xl font-bold p-2 focus:outline-none cursor-pointer">&times;</button>
+    
+    <button onclick="prevLightbox(event)" aria-label="Foto anterior" class="absolute left-3 sm:left-6 z-50 bg-slate-900/75 hover:bg-slate-800 text-white p-3 rounded-full border border-white/20 focus:outline-none transition-all cursor-pointer shadow-lg">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+    </button>
+
+    <div class="relative max-w-4xl w-full flex flex-col items-center">
+      <img id="lightbox-img" src="" alt="Vista ampliada de la posada" class="max-h-[80vh] w-auto max-w-full rounded-xl shadow-2xl object-contain border border-white/10">
+      <p id="lightbox-caption" class="text-white text-xs sm:text-sm font-medium mt-4 text-center bg-black/75 px-5 py-2.5 rounded-full border border-white/15 max-w-xl"></p>
+    </div>
+
+    <button onclick="nextLightbox(event)" aria-label="Siguiente foto" class="absolute right-3 sm:right-6 z-50 bg-slate-900/75 hover:bg-slate-800 text-white p-3 rounded-full border border-white/20 focus:outline-none transition-all cursor-pointer shadow-lg">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+    </button>
   </div>
 
-  <!-- ================= INLINE SCRIPT FOR TABS, LIGHTBOX, FILTERS & BUDGET ================= -->
+  <!-- ================= INLINE SCRIPT ================= -->
   <script>
+    // --- NAVEGACIÓN ENTRE TABS ---
     function switchTab(tabId) {
       document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
       document.querySelectorAll('.tab-btn').forEach(el => {
@@ -901,6 +1179,7 @@
       }
     }
 
+    // --- FILTRADO DE GALERÍA ---
     function filterGallery(category) {
       document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.classList.remove('bg-slate-900', 'text-white', 'active');
@@ -923,18 +1202,57 @@
       });
     }
 
+    // --- LIGHTBOX INTERACTIVO Y ACCESIBLE (12 FOTOS) ---
+    const galleryItems = [
+      { src: 'img/posada_06.jpg', caption: 'Piscina Privada & Solarium — Agua cristalina con escalones de acceso y área de descanso' },
+      { src: 'img/posada_10.jpg', caption: 'Zona Parrillera & Cocina Exterior — Parrillera de ladrillos con chimenea, estufa industrial de 3 hornillas y mesones con fregadero' },
+      { src: 'img/posada_01.jpg', caption: 'Caney Bar & Barra Social — Barra rústica con taburetes altos, luces colgantes y acceso al congelador al fondo' },
+      { src: 'img/posada_11.jpg', caption: 'Terraza de Piscina & Sombrilla — Mesa de jardín con sombrilla grande para compartir junto a la piscina' },
+      { src: 'img/posada_03.jpg', caption: 'Porche & Corredor Techado — Mesa redonda, bancos de descanso de madera y vista directa al patio parrillero' },
+      { src: 'img/posada_05.jpg', caption: 'Habitación Matrimonial — Cama doble matrimonial con lencería blanca y cabecero rústico de madera natural' },
+      { src: 'img/posada_09.jpg', caption: 'Dormitorio Grupal con Literas — Litera doble metálica + cama individual + cama matrimonial (capacidad 5 personas)' },
+      { src: 'img/posada_07.jpg', caption: 'Habitación Mixta — Cama matrimonial amplia con cabecero rústico y cama individual auxiliar' },
+      { src: 'img/posada_04.jpg', caption: 'Habitación con Camas Individuales — Climatizada con aire acondicionado split, ventilador de techo y baño privado' },
+      { src: 'img/posada_02.jpg', caption: 'Sala de Estar Interior — Sofá-cama nido de madera, pared rústica de piedra laja y arco conector a la cocina' },
+      { src: 'img/posada_08.jpg', caption: 'Distribuidor Central & Sala Interna — Vista panorámica de la sala que conecta los dormitorios y áreas internas' },
+      { src: 'img/posada_12.jpg', caption: 'Estacionamiento Privado Cerrado — Amplio patio lateral pavimentado de concreto con muro perimetral seguro para vehículos' }
+    ];
+
+    let currentGalleryIndex = 0;
+
     function openLightbox(src, caption) {
       const modal = document.getElementById('lightbox-modal');
-      const img = document.getElementById('lightbox-img');
-      const cap = document.getElementById('lightbox-caption');
-      img.src = src;
-      cap.textContent = caption || 'Posada El Timón de Belén';
+      const foundIdx = galleryItems.findIndex(item => item.src === src);
+      if (foundIdx !== -1) {
+        currentGalleryIndex = foundIdx;
+      }
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-caption').textContent = caption || 'Posada El Timón de Belén';
       modal.classList.remove('hidden');
+    }
+
+    function showLightboxIndex(idx) {
+      if (idx < 0) idx = galleryItems.length - 1;
+      if (idx >= galleryItems.length) idx = 0;
+      currentGalleryIndex = idx;
+      const item = galleryItems[currentGalleryIndex];
+      document.getElementById('lightbox-img').src = item.src;
+      document.getElementById('lightbox-caption').textContent = item.caption;
+    }
+
+    function nextLightbox(e) {
+      if (e) e.stopPropagation();
+      showLightboxIndex(currentGalleryIndex + 1);
+    }
+
+    function prevLightbox(e) {
+      if (e) e.stopPropagation();
+      showLightboxIndex(currentGalleryIndex - 1);
     }
 
     function closeLightbox(e) {
       if (e.target.id === 'lightbox-modal') {
-        document.getElementById('lightbox-modal').classList.add('hidden');
+        closeLightboxDirect();
       }
     }
 
@@ -942,10 +1260,17 @@
       document.getElementById('lightbox-modal').classList.add('hidden');
     }
 
+    // Navegación por teclado (WCAG)
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeLightboxDirect();
+      const modal = document.getElementById('lightbox-modal');
+      if (!modal.classList.contains('hidden')) {
+        if (e.key === 'Escape') closeLightboxDirect();
+        if (e.key === 'ArrowRight') nextLightbox();
+        if (e.key === 'ArrowLeft') prevLightbox();
+      }
     });
 
+    // --- ACCESO DIRECTO AL MENÚ DESDE HERO CTA ---
     function goToMenuSection() {
       switchTab('menu');
       setTimeout(() => {
@@ -956,6 +1281,62 @@
       }, 60);
     }
 
+    // --- COPIADO AL PORTAPAPELES CON FEEDBACK ---
+    function copyAddress() {
+      const addr = "Sector El Playón, 27 Calle Urdaneta, Ocumare de la Costa, Estado Aragua";
+      navigator.clipboard.writeText(addr).then(() => {
+        const label = document.getElementById('copy-address-label');
+        if (label) {
+          const original = label.textContent;
+          label.textContent = "¡Copiado!";
+          setTimeout(() => label.textContent = original, 2000);
+        }
+      }).catch(err => {
+        console.error("Error al copiar dirección:", err);
+      });
+    }
+
+    function copyPagomovil() {
+      const pagoData = "Banco: 0102 - Banco de Venezuela\nTeléfono: 0412-1339426\nCédula: V-22.296.658\nBeneficiario: Mikel Itriago\nConcepto: Viaje Ocumare El Timon";
+      navigator.clipboard.writeText(pagoData).then(() => {
+        const label = document.getElementById('copy-pagomovil-label');
+        if (label) {
+          const original = label.textContent;
+          label.textContent = "¡Datos Copiados!";
+          setTimeout(() => label.textContent = original, 2200);
+        }
+      }).catch(err => {
+        console.error("Error al copiar datos de Pago Móvil:", err);
+      });
+    }
+
+    // --- CHECKLIST CON PERSISTENCIA LOCALSTORAGE ---
+    function toggleChecklistItem(el) {
+      if (!el || !el.id) return;
+      try {
+        localStorage.setItem('clavel_chk_' + el.id, el.checked ? 'true' : 'false');
+      } catch (err) {
+        console.warn("No se pudo guardar estado de checklist en localStorage:", err);
+      }
+    }
+
+    function loadChecklist() {
+      try {
+        const checkboxes = document.querySelectorAll('#tab-roles input[type="checkbox"]');
+        checkboxes.forEach(cb => {
+          if (cb.id) {
+            const saved = localStorage.getItem('clavel_chk_' + cb.id);
+            if (saved !== null) {
+              cb.checked = (saved === 'true');
+            }
+          }
+        });
+      } catch (err) {
+        console.warn("No se pudo leer estado de checklist de localStorage:", err);
+      }
+    }
+
+    // --- SIMULADOR DE PRESUPUESTO DINÁMICO ---
     function recalculateBudget() {
       const posada = parseFloat(document.getElementById('cost-posada').value) || 0;
       const parrilla = parseFloat(document.getElementById('cost-parrilla').value) || 0;
@@ -995,6 +1376,11 @@
       document.getElementById('statCuota').textContent = '$' + cuotaTotal.toFixed(2);
       document.getElementById('heroCuotaPersona').textContent = '$' + cuotaTotal.toFixed(2);
       
+      const mobileVal = document.getElementById('mobileCuotaVal');
+      if (mobileVal) {
+        mobileVal.textContent = '$' + cuotaTotal.toFixed(2);
+      }
+
       const statCuotaDesc = document.getElementById('statCuotaDesc');
       if (statCuotaDesc) {
         statCuotaDesc.textContent = 'Posada ($' + cuotaPosada.toFixed(2) + ') + Consumo ($' + cuotaConsumo.toFixed(2) + ')';
@@ -1006,8 +1392,10 @@
       }
     }
 
+    // Inicialización al cargar la página
     window.addEventListener('DOMContentLoaded', () => {
       recalculateBudget();
+      loadChecklist();
     });
   </script>
 </body>
