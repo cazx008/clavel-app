@@ -6,6 +6,8 @@
   <title>Escapada Playera — El Timón de Belén | 14 Personas</title>
   <!-- Tailwind CSS CDN oficial antigravity -->
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <!-- Luma Official Checkout SDK -->
+  <script id="luma-checkout" src="https://embed.lu.ma/checkout-button.js"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
     body {
@@ -77,9 +79,9 @@
 
           <!-- Quick Action Buttons -->
           <div class="mt-6 flex flex-wrap gap-3">
-            <a href="https://lu.ma/sytgtc8i" id="luma-hero-btn" target="_blank" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 hover:opacity-95 text-white text-sm font-bold shadow-lg shadow-rose-500/30 transition-all transform active:scale-95">
-              <span>🎟️</span> Votar & Confirmar en Luma
-            </a>
+            <button onclick="goToMenuSection()" id="luma-hero-btn" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 hover:opacity-95 text-white text-sm font-bold shadow-lg shadow-rose-500/30 transition-all transform active:scale-95 cursor-pointer">
+              <span>🎟️</span> Votar & Confirmar Menú
+            </button>
             <button onclick="switchTab('galeria')" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-sm font-bold shadow-lg shadow-amber-500/30 transition-all transform active:scale-95">
               <span>📸</span> Ver Fotos Reales
             </button>
@@ -364,193 +366,236 @@
 
     <!-- TAB 3: MENÚ & VOTACIÓN -->
     <section id="tab-menu" class="tab-content hidden space-y-8">
-      <div>
-        <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Plan de Alimentación & Inscripción Oficial</h2>
-        <p class="text-sm text-slate-500 mt-1">
-          El almuerzo del sábado es parrillada fija para todos. Los otros 4 tiempos de comida y la confirmación de cavas/transporte se responden directamente en el formulario oficial de Luma a continuación:
-        </p>
-      </div>
-
-      <!-- FORMULARIO EMBEBIDO EN PANTALLA (LUMA INLINE IFRAME) -->
-      <div class="glass-card rounded-2xl p-4 sm:p-6 shadow-md border-2 border-rose-200/80 bg-gradient-to-b from-white via-rose-50/20 to-white">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 pb-4 border-b border-rose-100">
-          <div>
-            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-pink-500 to-rose-500 text-white shadow-sm mb-1.5">
-              <span>🎟️</span> FORMULARIO OFICIAL • OCUMARE DTMF
+      
+      <!-- HERO CALLOUT DE VOTACIÓN OFICIAL EN LUMA -->
+      <div class="glass-card rounded-2xl p-6 sm:p-8 shadow-lg border-2 border-rose-200/90 bg-gradient-to-br from-white via-rose-50/30 to-amber-50/20">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+          <div class="space-y-2 max-w-2xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-pink-500 to-rose-600 text-white shadow-sm">
+              <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+              REGISTRO OFICIAL • OCUMARE DTMF
             </div>
-            <h3 class="text-xl font-extrabold text-slate-900">Inscríbete y Vota tu Menú Aquí</h3>
-            <p class="text-xs text-slate-600 mt-0.5">
-              Formulario directo en Luma: tus datos quedarán registrados y podrás elegir tus opciones de comida. Cupo máximo: 14 personas (requiere aprobación).
+            <h2 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+              Votación de Menú & Confirmación de Asistencia
+            </h2>
+            <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+              Revisa abajo la propuesta culinaria del fin de semana (la parrillada fija del sábado y las opciones de desayunos, cena y almuerzo playero). Luego abre el formulario oficial para elegir tus platos y formalizar tu cupo.
             </p>
+            <div class="flex flex-wrap items-center gap-3 pt-2 text-xs font-semibold text-slate-500">
+              <span class="flex items-center gap-1.5"><span class="text-emerald-500">✓</span> 14 Cupos Máximos</span>
+              <span class="flex items-center gap-1.5"><span class="text-emerald-500">✓</span> Aprobación Directa</span>
+              <span class="flex items-center gap-1.5"><span class="text-emerald-500">✓</span> Logística de Cavas & Autos</span>
+            </div>
           </div>
-          <a href="https://lu.ma/sytgtc8i" target="_blank" class="shrink-0 inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-500 text-white text-xs font-bold shadow-md shadow-rose-600/25 transition-all">
-            <span>🚀</span> Abrir en Luma.com &rarr;
-          </a>
-        </div>
 
-        <!-- LUMA IFRAME -->
-        <div class="w-full rounded-xl overflow-hidden border border-slate-200 shadow-inner bg-slate-50">
-          <iframe
-            src="https://luma.com/embed/event/evt-p0llKxnfB6AlXYh/simple"
-            width="100%"
-            height="550"
-            frameborder="0"
-            style="border: none; border-radius: 12px; width: 100%; display: block;"
-            allow="fullscreen; payment"
-            aria-hidden="false"
-            tabindex="0">
-          </iframe>
+          <div class="flex flex-col sm:flex-row lg:flex-col gap-3 shrink-0">
+            <!-- BOTÓN OFICIAL SDK MODAL LUMA -->
+            <a href="https://lu.ma/event/sytgtc8i"
+               class="luma-checkout--button inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-r from-pink-600 via-rose-600 to-amber-500 hover:from-pink-500 hover:to-amber-400 text-white font-bold shadow-xl shadow-rose-500/30 transition-all transform active:scale-95 text-sm sm:text-base cursor-pointer text-center"
+               data-luma-action="checkout"
+               data-luma-event-id="sytgtc8i">
+              <span class="text-lg">🗳️</span> Abrir Formulario y Votar en Luma
+            </a>
+            <a href="https://lu.ma/sytgtc8i" target="_blank" class="inline-flex items-center justify-center gap-1.5 text-xs font-medium text-slate-500 hover:text-slate-800 transition-colors">
+              <span>↗</span> Abrir en página completa de Luma
+            </a>
+          </div>
         </div>
       </div>
 
       <!-- MEAL 1: SÁBADO ALMUERZO (FIJO) -->
-      <div class="bg-gradient-to-r from-amber-500/10 via-orange-500/5 to-transparent border-l-4 border-amber-500 bg-white rounded-2xl p-6 shadow-sm">
+      <div class="bg-gradient-to-r from-amber-500/15 via-orange-500/5 to-transparent border-l-4 border-amber-500 bg-white rounded-2xl p-6 shadow-sm">
         <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
-          <span class="px-2.5 py-1 text-xs font-bold rounded-md bg-amber-500 text-white uppercase tracking-wider">Menú Principal Confirmado</span>
-          <span class="text-xs font-semibold text-slate-500">Sábado 1:30 PM</span>
+          <span class="px-3 py-1 text-xs font-bold rounded-lg bg-amber-500 text-slate-950 uppercase tracking-wider flex items-center gap-1.5">
+            <span>🥩</span> Menú Principal Confirmado (Fijo para Todos)
+          </span>
+          <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-3 py-1 rounded-full">Sábado 1:30 PM • Área Parrillera</span>
         </div>
-        <h3 class="text-lg font-bold text-slate-900">Parrillada Mixta Marina & Tierra (~6.2 kg en brasas)</h3>
-        <p class="text-sm text-slate-600 mt-1">
-          Punta trasera/solomo de res (2.8 kg), pechuga marinada (1.8 kg), chorizo ahumado (1.2 kg), morcilla (0.8 kg) + ensalada rallada de repollo y zanahoria con aderezo tártara + guasacaca artesanal (1.5L) + yuca caliente sancochada y queso de mano.
+        <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Gran Parrillada Mixta Marina & Tierra (~6.2 kg en brasas)</h3>
+        <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+          Punta trasera / solomo de res (2.8 kg), pechuga marinada al limón y hierbas (1.8 kg), chorizo ahumado parrillero (1.2 kg) y morcilla artesanal (0.8 kg). Acompañado de ensalada rallada fresca de repollo y zanahoria con aderezo tártara, guasacaca criolla casera en licuadora (1.5L), yuca caliente sancochada y queso de mano fresco.
+        </p>
+        <div class="mt-3 flex flex-wrap gap-2 text-xs">
+          <span class="px-2.5 py-1 rounded-md bg-amber-50 text-amber-800 font-semibold border border-amber-200">Carbón y leña incluidos</span>
+          <span class="px-2.5 py-1 rounded-md bg-amber-50 text-amber-800 font-semibold border border-amber-200">Estufa industrial 3 hornillas</span>
+          <span class="px-2.5 py-1 rounded-md bg-amber-50 text-amber-800 font-semibold border border-amber-200">Guasacaca artesanal</span>
+        </div>
+      </div>
+
+      <!-- SECCIÓN INFORMATIVA: OPCIONES A VOTAR -->
+      <div class="pt-2">
+        <div class="flex items-center gap-2 mb-1">
+          <span class="text-xl">🍽️</span>
+          <h3 class="text-xl font-extrabold text-slate-900">Opciones a Decidir en la Votación</h3>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-500 max-w-2xl">
+          A continuación se detallan las propuestas gastronómicas para cada tiempo de comida. Elige tu favorita al abrir el formulario de Luma:
         </p>
       </div>
 
-      <div class="pt-2">
-        <h3 class="text-base sm:text-lg font-bold text-slate-900">Guía de Opciones para Votar</h3>
-        <p class="text-xs text-slate-500 mt-0.5">Detalles de las opciones que puedes elegir en el formulario oficial de arriba:</p>
-      </div>
-
-      <!-- VOTING CARDS -->
+      <!-- CARDS GRID -->
       <div class="grid md:grid-cols-2 gap-6">
 
-        <!-- VOTE 1: DESAYUNO SÁBADO -->
-        <div class="glass-card rounded-2xl p-6 shadow-sm">
-          <div class="flex items-center justify-between mb-4">
-            <h4 class="font-bold text-slate-900 flex items-center gap-2">
-              <span class="text-lg">🥐</span> Sábado Desayuno
-            </h4>
-            <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600" id="badge-sat-bk">3 Opciones</span>
+        <!-- COMIDA 1: DESAYUNO SÁBADO -->
+        <div class="glass-card rounded-2xl p-6 shadow-sm border border-slate-200/80 hover:border-cyan-300 transition-colors">
+          <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl">🥐</span>
+              <div>
+                <h4 class="font-bold text-slate-900 text-base">Sábado — Desayuno</h4>
+                <p class="text-[11px] text-slate-500">Llegada a la costa (8:00 AM - 9:30 AM)</p>
+              </div>
+            </div>
+            <span class="text-xs font-bold px-2.5 py-1 rounded-full badge-soft-cyan">3 Alternativas</span>
           </div>
-          <div class="space-y-3" id="group-sat-bk">
-            <button onclick="castVote('sat_bk', 'carretera', 'Parada en carretera (empanadas calientes)')" class="vote-opt w-full text-left p-3.5 rounded-xl border border-slate-200 hover:border-cyan-400 hover:bg-cyan-50/50 transition-all flex items-center justify-between group">
-              <div>
-                <div class="font-semibold text-sm text-slate-800 group-hover:text-cyan-800">1. Parada en Carretera</div>
-                <div class="text-xs text-slate-500">Empanadas calientes de cazón o queso al bajar la curva. Cero cocina.</div>
-              </div>
-              <span class="vote-indicator text-xs font-bold text-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity">Votar</span>
-            </button>
 
-            <button onclick="castVote('sat_bk', 'viandas', 'Traer pastelitos/empanadas listos en viandas')" class="vote-opt w-full text-left p-3.5 rounded-xl border border-slate-200 hover:border-cyan-400 hover:bg-cyan-50/50 transition-all flex items-center justify-between group">
-              <div>
-                <div class="font-semibold text-sm text-slate-800 group-hover:text-cyan-800">2. Viandas Listas desde Casa</div>
-                <div class="text-xs text-slate-500">Hechos el viernes y llevados en aluminio. Desayuno en la playa.</div>
+          <div class="space-y-3">
+            <div class="p-3.5 rounded-xl border border-slate-200/70 bg-slate-50/60">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-sm text-slate-800">Opción 1: Parada en Carretera</span>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">Cero Cocina</span>
               </div>
-              <span class="vote-indicator text-xs font-bold text-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity">Votar</span>
-            </button>
+              <p class="text-xs text-slate-600 mt-1">Empanadas calientes recién fritas de cazón, queso o carne al bajar la curva de Rancho Grande. Cada quien escoge y se come en el camino.</p>
+            </div>
 
-            <button onclick="castVote('sat_bk', 'freir', 'Freír en la casa de playa')" class="vote-opt w-full text-left p-3.5 rounded-xl border border-slate-200 hover:border-cyan-400 hover:bg-cyan-50/50 transition-all flex items-center justify-between group">
-              <div>
-                <div class="font-semibold text-sm text-slate-800 group-hover:text-cyan-800">3. Freír en la Casa al Llegar</div>
-                <div class="text-xs text-slate-500">Llevar masa y guisos. (Requiere 1.5 horas de cocinero al llegar).</div>
+            <div class="p-3.5 rounded-xl border border-slate-200/70 bg-slate-50/60">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-sm text-slate-800">Opción 2: Viandas Listas desde Casa</span>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-sky-100 text-sky-800">Directo a la Playa</span>
               </div>
-              <span class="vote-indicator text-xs font-bold text-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity">Votar</span>
-            </button>
+              <p class="text-xs text-slate-600 mt-1">Pastelitos horneados o empanadas preparados el viernes y transportados en papel aluminio. Se desayuna directamente en la arena.</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl border border-slate-200/70 bg-slate-50/60">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-sm text-slate-800">Opción 3: Freír en la Posada al Llegar</span>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-100 text-amber-800">Tradición Casera</span>
+              </div>
+              <p class="text-xs text-slate-600 mt-1">Llevar masa lista y guisos en envases refrigerados. (Requiere destinar 1.5 horas de cocinero en la estufa al llegar a la posada).</p>
+            </div>
           </div>
-          <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-500" id="result-sat-bk">Tu selección: <span class="font-semibold text-cyan-700">Ninguna seleccionada</span></div>
         </div>
 
-        <!-- VOTE 2: CENA SÁBADO -->
-        <div class="glass-card rounded-2xl p-6 shadow-sm">
-          <div class="flex items-center justify-between mb-4">
-            <h4 class="font-bold text-slate-900 flex items-center gap-2">
-              <span class="text-lg">🫓</span> Sábado Cena
-            </h4>
-            <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">2 Opciones</span>
-          </div>
-          <div class="space-y-3" id="group-sat-dn">
-            <button onclick="castVote('sat_dn', 'clasicos', 'Bollitos aliñados clásicos con queso blanco')" class="vote-opt w-full text-left p-3.5 rounded-xl border border-slate-200 hover:border-cyan-400 hover:bg-cyan-50/50 transition-all flex items-center justify-between group">
+        <!-- COMIDA 2: CENA SÁBADO -->
+        <div class="glass-card rounded-2xl p-6 shadow-sm border border-slate-200/80 hover:border-amber-300 transition-colors">
+          <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl">🫓</span>
               <div>
-                <div class="font-semibold text-sm text-slate-800 group-hover:text-cyan-800">A. Bollitos Aliñados Clásicos con Queso Blanco</div>
-                <div class="text-xs text-slate-500">Masa aliñada con ají dulce y onoto, hervidos, mantequilla y queso llanero.</div>
+                <h4 class="font-bold text-slate-900 text-base">Sábado — Cena</h4>
+                <p class="text-[11px] text-slate-500">Post-piscina y descanso (8:00 PM)</p>
               </div>
-              <span class="vote-indicator text-xs font-bold text-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity">Votar</span>
-            </button>
+            </div>
+            <span class="text-xs font-bold px-2.5 py-1 rounded-full badge-soft-amber">2 Alternativas</span>
+          </div>
 
-            <button onclick="castVote('sat_dn', 'cachapas', 'Cachapas con lo que quede de la parrilla')" class="vote-opt w-full text-left p-3.5 rounded-xl border border-slate-200 hover:border-cyan-400 hover:bg-cyan-50/50 transition-all flex items-center justify-between group">
-              <div>
-                <div class="font-semibold text-sm text-slate-800 group-hover:text-cyan-800">B. Cachapas con lo que Quede de la Parrilla</div>
-                <div class="text-xs text-slate-500">Cachapas dulces rellenas con carne/pollo asado y queso de mano.</div>
+          <div class="space-y-3">
+            <div class="p-3.5 rounded-xl border border-slate-200/70 bg-slate-50/60">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-sm text-slate-800">Opción A: Bollitos Aliñados con Queso</span>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-100 text-amber-800">Típico Costero</span>
               </div>
-              <span class="vote-indicator text-xs font-bold text-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity">Votar</span>
-            </button>
+              <p class="text-xs text-slate-600 mt-1">Masa de maíz aliñada con ají dulce picadito y onoto, hervidos al momento, servidos con mantequilla cremosa y abundante queso blanco llanero rallado.</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl border border-slate-200/70 bg-slate-50/60">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-sm text-slate-800">Opción B: Cachapas con Sobras de la Parrilla</span>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">Aprovechamiento Pro</span>
+              </div>
+              <p class="text-xs text-slate-600 mt-1">Masa dulce de maíz tierno a la plancha rellenas con queso de mano y cortes de carne/pollo asados en las brasas del mediodía.</p>
+            </div>
           </div>
-          <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-500" id="result-sat-dn">Tu selección: <span class="font-semibold text-cyan-700">Ninguna seleccionada</span></div>
         </div>
 
-        <!-- VOTE 3: DOMINGO DESAYUNO -->
-        <div class="glass-card rounded-2xl p-6 shadow-sm">
-          <div class="flex items-center justify-between mb-4">
-            <h4 class="font-bold text-slate-900 flex items-center gap-2">
-              <span class="text-lg">🥪</span> Domingo Desayuno
-            </h4>
-            <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">2 Opciones</span>
-          </div>
-          <div class="space-y-3" id="group-sun-bk">
-            <button onclick="castVote('sun_bk', 'canilla', 'Canillas al grill tostadas con mantequilla de ajo')" class="vote-opt w-full text-left p-3.5 rounded-xl border border-slate-200 hover:border-cyan-400 hover:bg-cyan-50/50 transition-all flex items-center justify-between group">
+        <!-- COMIDA 3: DOMINGO DESAYUNO -->
+        <div class="glass-card rounded-2xl p-6 shadow-sm border border-slate-200/80 hover:border-purple-300 transition-colors">
+          <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl">🥪</span>
               <div>
-                <div class="font-semibold text-sm text-slate-800 group-hover:text-cyan-800">B. Pan Canilla Tostado al Grill</div>
-                <div class="text-xs text-slate-500">Rellenos de jamón y queso, dorados en plancha o brasas con mantequilla de ajo.</div>
+                <h4 class="font-bold text-slate-900 text-base">Domingo — Desayuno</h4>
+                <p class="text-[11px] text-slate-500">Energía para el segundo día de mar (7:30 AM)</p>
               </div>
-              <span class="vote-indicator text-xs font-bold text-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity">Votar</span>
-            </button>
+            </div>
+            <span class="text-xs font-bold px-2.5 py-1 rounded-full badge-soft-purple">2 Alternativas</span>
+          </div>
 
-            <button onclick="castVote('sun_bk', 'molde', 'Sándwiches deli fríos en pan de molde')" class="vote-opt w-full text-left p-3.5 rounded-xl border border-slate-200 hover:border-cyan-400 hover:bg-cyan-50/50 transition-all flex items-center justify-between group">
-              <div>
-                <div class="font-semibold text-sm text-slate-800 group-hover:text-cyan-800">A. Pan de Molde Deli Frío</div>
-                <div class="text-xs text-slate-500">Armado en serie ultra rápido en 15 minutos para ir directo a la playa.</div>
+          <div class="space-y-3">
+            <div class="p-3.5 rounded-xl border border-slate-200/70 bg-slate-50/60">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-sm text-slate-800">Opción A: Pan Canilla Tostado al Grill</span>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-purple-100 text-purple-800">Caliente y Crujiente</span>
               </div>
-              <span class="vote-indicator text-xs font-bold text-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity">Votar</span>
-            </button>
+              <p class="text-xs text-slate-600 mt-1">Canillas rellenas de jamón cocido y queso amarillo, tostadas en plancha o brasas con pincelada de mantequilla aromatizada de ajo.</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl border border-slate-200/70 bg-slate-50/60">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-sm text-slate-800">Opción B: Sándwiches Deli en Pan de Molde</span>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-sky-100 text-sky-800">Ultra Rápido (15 min)</span>
+              </div>
+              <p class="text-xs text-slate-600 mt-1">Armado en serie en 15 minutos: jamón, queso, mayonesa y mostaza. Listos para empacar y salir volando hacia la playa.</p>
+            </div>
           </div>
-          <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-500" id="result-sun-bk">Tu selección: <span class="font-semibold text-cyan-700">Ninguna seleccionada</span></div>
         </div>
 
-        <!-- VOTE 4: DOMINGO ALMUERZO -->
-        <div class="glass-card rounded-2xl p-6 shadow-sm">
-          <div class="flex items-center justify-between mb-4">
-            <h4 class="font-bold text-slate-900 flex items-center gap-2">
-              <span class="text-lg">🏖️</span> Domingo Almuerzo Playero
-            </h4>
-            <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-slate-100 text-slate-600">3 Opciones</span>
+        <!-- COMIDA 4: DOMINGO ALMUERZO -->
+        <div class="glass-card rounded-2xl p-6 shadow-sm border border-slate-200/80 hover:border-emerald-300 transition-colors">
+          <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl">🏖️</span>
+              <div>
+                <h4 class="font-bold text-slate-900 text-base">Domingo — Almuerzo Playero</h4>
+                <p class="text-[11px] text-slate-500">Almuerzo en la bahía (1:00 PM - 2:00 PM)</p>
+              </div>
+            </div>
+            <span class="text-xs font-bold px-2.5 py-1 rounded-full badge-soft-emerald">3 Alternativas</span>
           </div>
-          <div class="space-y-3" id="group-sun-ln">
-            <button onclick="castVote('sun_ln', 'pepitos', 'Pepitos playeros (aprovechamiento de parrillada)')" class="vote-opt w-full text-left p-3.5 rounded-xl border border-slate-200 hover:border-cyan-400 hover:bg-cyan-50/50 transition-all flex items-center justify-between group">
-              <div>
-                <div class="font-semibold text-sm text-slate-800 group-hover:text-cyan-800">1. Pepitos Playeros de Rescate</div>
-                <div class="text-xs text-slate-500">Carnes y chorizos sobrantes de la parrilla salteados en canillas con salsas.</div>
-              </div>
-              <span class="vote-indicator text-xs font-bold text-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity">Votar</span>
-            </button>
 
-            <button onclick="castVote('sun_ln', 'pasta', 'Ensalada fría de pasta playera con atún y maíz')" class="vote-opt w-full text-left p-3.5 rounded-xl border border-slate-200 hover:border-cyan-400 hover:bg-cyan-50/50 transition-all flex items-center justify-between group">
-              <div>
-                <div class="font-semibold text-sm text-slate-800 group-hover:text-cyan-800">2. Ensalada Fría de Pasta</div>
-                <div class="text-xs text-slate-500">Pasta corta con atún, maíz, queso en cubos y aderezo en la cava. Cero ollas.</div>
+          <div class="space-y-3">
+            <div class="p-3.5 rounded-xl border border-slate-200/70 bg-slate-50/60">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-sm text-slate-800">Opción 1: Pepitos Playeros de Rescate</span>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-100 text-amber-800">Sabor Urbano</span>
               </div>
-              <span class="vote-indicator text-xs font-bold text-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity">Votar</span>
-            </button>
+              <p class="text-xs text-slate-600 mt-1">Carnes y chorizos de la parrillada salteados en pan canilla con salsas, papitas ralladas y queso fundido.</p>
+            </div>
 
-            <button onclick="castVote('sun_ln', 'kiosco', 'Pescado frito en kiosco de playa (costo extra individual)')" class="vote-opt w-full text-left p-3.5 rounded-xl border border-slate-200 hover:border-cyan-400 hover:bg-cyan-50/50 transition-all flex items-center justify-between group">
-              <div>
-                <div class="font-semibold text-sm text-slate-800 group-hover:text-cyan-800">3. Pescado Frito en Kiosco</div>
-                <div class="text-xs text-slate-500">Comer en la arena a la orilla del mar. Costo adicional individual (~$10-15).</div>
+            <div class="p-3.5 rounded-xl border border-slate-200/70 bg-slate-50/60">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-sm text-slate-800">Opción 2: Ensalada Fría de Pasta</span>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">Cero Ollas</span>
               </div>
-              <span class="vote-indicator text-xs font-bold text-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity">Votar</span>
-            </button>
+              <p class="text-xs text-slate-600 mt-1">Pasta corta con atún, maíz dulce, dados de queso blanco y aderezo fresco, mantenida helada en la cava térmica.</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl border border-slate-200/70 bg-slate-50/60">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-sm text-slate-800">Opción 3: Pescado Frito en Kiosco</span>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-rose-100 text-rose-800">Gasto Individual</span>
+              </div>
+              <p class="text-xs text-slate-600 mt-1">Comer rueda o roncador frito con tostones y ensalada a la orilla del mar (costo adicional por persona ~$10-$15).</p>
+            </div>
           </div>
-          <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-500" id="result-sun-ln">Tu selección: <span class="font-semibold text-cyan-700">Ninguna seleccionada</span></div>
         </div>
 
+      </div>
+
+      <!-- BOTTOM CTA BANNER -->
+      <div class="bg-gradient-to-r from-slate-900 via-slate-800 to-cyan-950 rounded-2xl p-6 sm:p-8 text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
+        <div class="space-y-1 text-center sm:text-left">
+          <h3 class="text-xl font-bold text-white">¿Listo para elegir tu menú y confirmar tu puesto?</h3>
+          <p class="text-xs sm:text-sm text-slate-300">
+            Abre el formulario oficial sin salir del sitio para registrar tus elecciones y datos de transporte.
+          </p>
+        </div>
+        <a href="https://lu.ma/event/sytgtc8i"
+           class="luma-checkout--button shrink-0 inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-pink-500 via-rose-500 to-amber-400 hover:opacity-95 text-slate-950 font-black shadow-lg shadow-rose-500/25 transition-all transform active:scale-95 text-sm cursor-pointer"
+           data-luma-action="checkout"
+           data-luma-event-id="sytgtc8i">
+          <span>🗳️</span> Abrir Formulario y Votar en Luma
+        </a>
       </div>
 
     </section>
@@ -901,20 +946,14 @@
       if (e.key === 'Escape') closeLightboxDirect();
     });
 
-    function castVote(category, optionKey, optionLabel) {
-      localStorage.setItem('vote_' + category, optionLabel);
-      const resultEl = document.getElementById('result-' + category);
-      if (resultEl) {
-        resultEl.innerHTML = 'Tu selección: <span class="font-semibold text-emerald-600">✓ ' + optionLabel + '</span>';
-      }
-      
-      const container = document.getElementById('group-' + category);
-      if (container) {
-        container.querySelectorAll('.vote-opt').forEach(btn => {
-          btn.classList.remove('border-cyan-500', 'bg-cyan-50/80', 'ring-2', 'ring-cyan-300');
-        });
-        event.currentTarget.classList.add('border-cyan-500', 'bg-cyan-50/80', 'ring-2', 'ring-cyan-300');
-      }
+    function goToMenuSection() {
+      switchTab('menu');
+      setTimeout(() => {
+        const menuSec = document.getElementById('tab-menu');
+        if (menuSec) {
+          menuSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 60);
     }
 
     function recalculateBudget() {
@@ -968,15 +1007,6 @@
     }
 
     window.addEventListener('DOMContentLoaded', () => {
-      ['sat_bk', 'sat_dn', 'sun_bk', 'sun_ln'].forEach(cat => {
-        const saved = localStorage.getItem('vote_' + cat);
-        if (saved) {
-          const resultEl = document.getElementById('result-' + cat);
-          if (resultEl) {
-            resultEl.innerHTML = 'Tu selección: <span class="font-semibold text-emerald-600">✓ ' + saved + '</span>';
-          }
-        }
-      });
       recalculateBudget();
     });
   </script>

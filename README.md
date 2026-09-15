@@ -35,15 +35,18 @@ Inspección visual detallada y clasificación exacta de las 12 fotos descargadas
 
 ---
 
-## 3. Matriz de Menús
+## 3. Matriz de Menús & Votación Oficial (Luma Modal)
 
-| Tiempo de Comida | Menú | Estado / Opciones |
+Las opciones gastronómicas se visualizan directamente en la landing page y el registro/votación formal se realiza mediante el SDK nativo de **Luma Checkout Modal** (`data-luma-action="checkout"`), permitiendo abrir el formulario sin salir de la web:
+
+| Tiempo de Comida | Menú | Estado / Opciones a Elegir |
 | :--- | :--- | :--- |
-| **Sábado Desayuno** | Empanadas / Pastelitos | **En Votación:** (1) Carretera / (2) Viandas listas / (3) Freír en casa |
-| **Sábado Almuerzo** | Parrillada Mixta (~6.2 kg) | **CONFIRMADO:** Res, Pollo, Chorizo, Morcilla, Yuca, Queso mano, Ensalada coleslaw y Guasacaca |
-| **Sábado Cena** | Bollitos Aliñados | **En Votación:** (A) Con mantequilla y queso blanco / (B) Rellenos de guiso |
-| **Domingo Desayuno**| Sándwiches | **En Votación:** (A) Canillas al grill tostadas / (B) Pan de molde deli frío |
-| **Domingo Almuerzo** | Playero | **En Votación:** (1) Pepitos de parrillada / (2) Ensalada fría de pasta / (3) Kiosco de playa |
+| **Sábado Desayuno** | Empanadas / Pastelitos | **En Votación:** (1) Parada en carretera / (2) Viandas listas desde casa / (3) Freír en la posada al llegar |
+| **Sábado Almuerzo** | Parrillada Mixta (~6.2 kg) | **CONFIRMADO (Fijo):** Res, Pollo, Chorizo, Morcilla, Yuca, Queso de mano, Ensalada coleslaw y Guasacaca |
+| **Sábado Cena** | Tradicional | **En Votación:** (A) Bollitos aliñados con queso blanco / (B) Cachapas con sobras de la parrillada |
+| **Domingo Desayuno**| Sándwiches | **En Votación:** (A) Pan canilla tostado al grill con ajo / (B) Pan de molde deli frío |
+| **Domingo Almuerzo** | Playero | **En Votación:** (1) Pepitos playeros de rescate / (2) Ensalada fría de pasta / (3) Pescado frito en kiosco |
+| **Logística Grupal** | Apoyo Asistentes | Registro de cavas térmicas portátiles y cupos de transporte en vehículos |
 
 ---
 
@@ -74,6 +77,9 @@ Inspección visual detallada y clasificación exacta de las 12 fotos descargadas
 
 ---
 
-## 6. Archivos del Proyecto
-* [`index.html`](index.html): Landing Page interactiva con catálogo visual auditado, filtros por categorías, simulador de presupuesto en vivo y votación de menús.
+## 6. Enlaces y Despliegue Oficial
+* **Sitio Web en Vivo (GitHub Pages):** [https://cazx008.github.io/clavel-app/](https://cazx008.github.io/clavel-app/)
+* **Repositorio GitHub:** [https://github.com/cazx008/clavel-app](https://github.com/cazx008/clavel-app)
+* **Evento en Luma:** [https://lu.ma/sytgtc8i](https://lu.ma/sytgtc8i)
+* [`index.html`](index.html): Landing Page interactiva con catálogo visual auditado, filtros por categorías, simulador de presupuesto en vivo, menú informativo y Luma Checkout Modal.
 * [`img/`](img/): Carpeta local con las 12 fotos reales de la posada descargadas desde Telegram.
